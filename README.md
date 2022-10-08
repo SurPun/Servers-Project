@@ -20,13 +20,15 @@ This uses the `nodemon` library to auto-restart the server when you save changes
 - [x] Test 2 Tests for user messages displayed correctly.
 - [x] Test 3 Tests for home route responds to post requests.
 
-To run:
-
+<details>
+  <summary>To run:</summary>
+  
 `npm run test:1`
 
 `npm run test:2`
 
 `npm run test:3`
+</details>
 
 ## Users Stories
 
