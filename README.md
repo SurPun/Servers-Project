@@ -2,7 +2,7 @@
 
 A website that allows users to make comments and read the comments of other users. This project is created with node.js
 
-Live page hosted on [Heroku](#LINK)
+Live page hosted on [Heroku](https://food-opinion.herokuapp.com/)
 
 ## Setup
 
