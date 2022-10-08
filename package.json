@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "start": "node src/index",
     "dev": "nodemon src/index.js",
     "test:1": "node tests/1.test.js",
     "test:2": "node tests/2.test.js",
