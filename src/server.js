@@ -102,8 +102,6 @@ server.post("/", bodyParser, (request, response) => {
       date,
     });
 
-    console.log(posts);
-
     response.redirect("/");
   }
 });
