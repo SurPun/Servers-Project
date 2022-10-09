@@ -9,13 +9,16 @@ function content(posts, errors = {}, formValues = {}) {
                    <p class="comments">${sanitisation(post.comments)}</p>
                    <p>${sanitisation(post.date)}</p>
                   </div>
+                  <form method="POST" action="/delete/${post.id}">
+                  <button type="submit">Serve</button>
+                  </form>
                 </span>
                </div>
               </li>`;
   });
 
   // HTML Content
-  const content = `
+  const content = ` 
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -36,7 +39,7 @@ function content(posts, errors = {}, formValues = {}) {
           </header>
   
           <!-- Submit new comments goes here -->
-          <form method="POST" class="center ">
+          <form method="POST" class="center form-main">
             <label class="sr-only" for="username">Username</label>
             <input id="username" name="username" placeholder="Name" value="${
               formValues.name

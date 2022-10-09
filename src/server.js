@@ -16,11 +16,13 @@ const bodyParser = express.urlencoded();
 // Dummy Data
 const posts = [
   {
+    id: 1,
     name: "Zack",
     comments: "Pizza's are the best!",
     date: "19/12/2022",
   },
   {
+    id: 2,
     name: "Anna",
     comments: "Donuts are yummy!",
     date: "22/12/2022",
@@ -41,10 +43,42 @@ server.get("/", (request, response) => {
   response.send(body);
 });
 
+// Delete Post
+server.post("/delete/:id", bodyParser, (req, res) => {
+  const id = parseInt(req.params.id);
+
+  // Delete Array Function
+  const removeByAttr = function (arr, attr, value) {
+    let i = posts.length;
+    while (i--) {
+      if (
+        posts[i] &&
+        posts[i].hasOwnProperty(attr) &&
+        arguments.length > 2 &&
+        posts[i][attr] === value
+      ) {
+        posts.splice(i, 1);
+      }
+    }
+    return posts;
+  };
+
+  // Removes Object in Posts
+  posts.map((post) => {
+    if (post.id === id) {
+      removeByAttr(posts, "id", id);
+    }
+
+    // console.log(id, post.id);
+  });
+  res.redirect("/");
+});
+
 // Handles form submission
 server.post("/", bodyParser, (request, response) => {
   const name = request.body.username;
   const comments = request.body.opinion;
+  const date = new Date().toLocaleDateString("en-GB");
 
   let formValues = { name, comments };
 
@@ -61,8 +95,15 @@ server.post("/", bodyParser, (request, response) => {
   if (Object.keys(errors).length) {
     response.status(400).send(content(posts, errors, formValues));
   } else {
-    const date = new Date().toLocaleDateString("en-GB");
-    posts.unshift({ name, comments, date });
+    posts.push({
+      id: posts.length === 0 ? 1 : posts[posts.length - 1].id + 1,
+      name,
+      comments,
+      date,
+    });
+
+    console.log(posts);
+
     response.redirect("/");
   }
 });

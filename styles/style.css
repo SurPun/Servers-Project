@@ -14,7 +14,7 @@ h1 {
   text-align: center;
 }
 
-form {
+.form-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,12 +167,13 @@ button:hover {
 }
 
 /* Mobile View ---------------------------------- */
-@media (max-width: 394px) {
-  .width-lg {
-    max-width: 14rem;
+@media (max-width: 619px) {
+  .center {
+    max-width: 13rem;
   }
 }
 
+/* Tablet View ---------------------------------- */
 @media (max-width: 620px) {
   .grid {
     display: grid;
