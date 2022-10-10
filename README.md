@@ -16,10 +16,6 @@ This uses the `nodemon` library to auto-restart the server when you save changes
 
 ## Test
 
-- [x] Test 1 Tests for missing routes.
-- [x] Test 2 Tests for user messages displayed correctly.
-- [x] Test 3 Tests for home route responds to post requests.
-
 <details>
   <summary>To run:</summary>
   
@@ -28,7 +24,12 @@ This uses the `nodemon` library to auto-restart the server when you save changes
 `npm run test:2`
 
 `npm run test:3`
+
 </details>
+
+- [x] Test 1 Tests for missing routes.
+- [x] Test 2 Tests for user messages displayed correctly.
+- [x] Test 3 Tests for home route responds to post requests.
 
 ## Users Stories
 
@@ -38,7 +39,7 @@ This uses the `nodemon` library to auto-restart the server when you save changes
 
 ## Stretch
 
-- [ ] As an impulsive person, I want to: delete my posts so no one can see them anymore.
+- [x] As an impulsive person, I want to: delete my posts so no one can see them anymore.
 
 ## Acceptance Criteria
 
