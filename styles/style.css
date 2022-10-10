@@ -179,6 +179,7 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
+    margin-right: 2rem;
     gap: 1rem;
   }
 }
