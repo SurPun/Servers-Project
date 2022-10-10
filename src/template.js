@@ -10,7 +10,7 @@ function content(posts, errors = {}, formValues = {}) {
                    <p>${sanitisation(post.date)}</p>
                   </div>
                   <form method="POST" action="/delete/${post.id}">
-                  <button type="submit">Serve</button>
+                  <button class="serve-button" type="submit">Serve</button>
                   </form>
                 </span>
                </div>
@@ -53,7 +53,7 @@ function content(posts, errors = {}, formValues = {}) {
             }"></textarea><br><br>
             ${validation(errors.comments)}
   
-            <button type="submit">Serve up your opinion!</button>
+            <button class="serve-opinion-button" type="submit">Serve up your opinion!</button>
           </form>
         </section>
   
