@@ -102,22 +102,10 @@ button:hover {
   margin-top: 350px;
 }
 
-#username:hover {
-  transition: all 0.5s;
-  background-color: salmon;
-  color: white;
-}
-
 #opinion {
   height: 5rem;
   width: 15rem;
   padding: 2px 50px;
-}
-
-#opinion:hover {
-  transition: all 0.5s;
-  background-color: salmon;
-  color: white;
 }
 
 .comments {
