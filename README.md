@@ -1,4 +1,4 @@
-# Week 1: Server Project
+# Week 1: Server Project (F&C)
 
 ### By: Sumithra, Joe, Yassien & Suraj
 A website that allows users to make comments and read the comments of other users. This project is created with node.js
